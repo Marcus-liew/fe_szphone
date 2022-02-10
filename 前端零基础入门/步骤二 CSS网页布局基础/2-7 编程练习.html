@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            color: #d9dde1;
+            text-align: center;
+        }
+        .header{
+            height: 100px;
+            width: 100%;
+            background: #2b333b;
+            line-height: 100px;
+            position: sticky;
+            top: 0;
+        }
+        .header__logo{
+            float: left;
+            height: 100px;
+            width: 300px;
+            background: url("/test_img/58c0d2d900016ce303000100.png");
+        }
+        .header__nav{
+            float: right;
+            height: 300px;
+            color: #d9dde1;
+        }
+        .header__nav a{
+            margin-right: 30px;
+            text-decoration: none;
+        }
+        header__nav a:hover{color: #9a0606;}
+
+        .banner{
+            height: 480px;
+            width: 1600px;
+            background: #069a30 url("/test_img/58c0eda50001e12416000480.jpg") no-repeat center;
+        }
+        .container{
+            height: 480px;
+            width: 1600px;
+            background: #f3a6a6 url("/test_img/58c0edb80001c9f216000480.jpg") no-repeat center;
+        }
+        .container2{
+            height: 480px;
+            width: 1600px;
+            background: #f3a6a6 url("/test_img/58c0edc9000100d516000480.jpg") no-repeat center;
+        }
+        .footer{
+            height: 50px;
+            width: 1600px;
+            background: #4d555d;
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header__logo"></div>
+        <div class="header__nav header__nav__item">
+            <a href="#">课程</a>
+            <a href="#">职业路径</a>
+            <a href="#">实战</a>
+            <a href="#">猿问</a>
+            <a href="#">手记</a>
+        </div>
+    </div>
+
+    <div class="banner"></div>
+    <div class="container"></div>
+    <div class="container2"></div>
+    <div class="footer"></div>
+</body>
+</html>
