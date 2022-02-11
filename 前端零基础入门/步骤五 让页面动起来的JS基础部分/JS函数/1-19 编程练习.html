@@ -1,0 +1,30 @@
+
+<!--小伙伴们，使用arguments对象获取到函数参数（任意一组数）的平均值，并且把得到的值转成整数，输出出来！-->
+<!--任务-->
+<!--第一步：写出函数，函数的返回值是函数的参数的平均值-->
+<!--第二步：调用函数，并对函数的返回值进行接收-->
+<!--第三步：将结果输出，返回的平均值是整数，需要把值用parseInt（）方法进行转化-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function get_avg(){
+        var len = arguments.length, sum = 0;
+        for (let i = 0; i < len; i++) {
+            sum = sum + arguments[i];
+        }
+        return parseInt(sum/len);
+    }
+
+    var result = get_avg(8,12,19);
+    document.write(result);
+
+
+</script>
+</body>
+</html>

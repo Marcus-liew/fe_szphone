@@ -8,9 +8,8 @@
 
 <script>
     function get_avg(){
-        var sum = 0;
-        let count = arguments.length;
-        for (let i = 0; i < arguments.length; i++) {
+        var sum = 0, count = arguments.length, i;
+        for (i = 0; i < arguments.length; i++) {
             sum = sum + arguments[i];
         }
         document.write(sum/count);
