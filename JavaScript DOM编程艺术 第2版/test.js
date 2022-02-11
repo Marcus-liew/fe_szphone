@@ -25,17 +25,27 @@
 // alert(items.length);
 
 // 自己实现 getElementsByClassName
-function get_element_by_class_name(node, classname){
-    if (node.getElementsByClassName){
-        return node.getElementsByClassName(classname);
-    }else {
-        var results = new Array();
-        var elems = node.getElementsByTagName("*");
-        for (let i = 0; i < elems.length; i++) {
-            if (elems[i].className.indexOf(classname) != -1){
-                results[result.length] = elems[i]
-            }
-        }
-        return results;
+// function get_element_by_class_name(node, classname){
+//     if (node.getElementsByClassName){
+//         return node.getElementsByClassName(classname);
+//     }else {
+//         var results = new Array();
+//         var elems = node.getElementsByTagName("*");
+//         for (let i = 0; i < elems.length; i++) {
+//             if (elems[i].className.indexOf(classname) != -1){
+//                 results[result.length] = elems[i]
+//             }
+//         }
+//         return results;
+//     }
+// }
+
+var paras = document.getElementsByTagName("p");
+for (let i = 0; i < paras.length; i++) {
+    var title_text = paras[i].getAttribute("title");
+    if (title_text){
+        alert(title_text);
+        paras[i].setAttribute("title","hello!");
+        alert(paras[i].getAttribute("title"));
     }
 }
