@@ -40,12 +40,27 @@
 //     }
 // }
 
-var paras = document.getElementsByTagName("p");
-for (let i = 0; i < paras.length; i++) {
-    var title_text = paras[i].getAttribute("title");
-    if (title_text){
-        alert(title_text);
-        paras[i].setAttribute("title","hello!");
-        alert(paras[i].getAttribute("title"));
-    }
-}
+// var paras = document.getElementsByTagName("p");
+// for (let i = 0; i < paras.length; i++) {
+//     var title_text = paras[i].getAttribute("title");
+//     if (title_text){
+//         alert(title_text);
+//         paras[i].setAttribute("title","hello!");
+//         alert(paras[i].getAttribute("title"));
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
