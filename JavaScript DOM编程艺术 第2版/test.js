@@ -51,6 +51,37 @@
 // }
 
 
+// var items = document.getElementsByTagName("li");
+//
+// var new_src = items[2].getAttribute("href");
+//
+// var waiting_to_change = document.getElementsByTagName("img");
+//
+// waiting_to_change[0].setAttribute("src", new_src);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
