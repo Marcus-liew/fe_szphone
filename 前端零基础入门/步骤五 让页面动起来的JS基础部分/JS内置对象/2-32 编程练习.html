@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--小伙伴们，根据gif效果图，使用数组的操作方法写出代码！-->
+<!--实现：-->
+<!--（1）循环弹出输入框，用户输入的任意字符的前两个被替换为“hello”，后面的字符不受影响，比如在页面中输入一组数据：1,2,3,4,5   把前两项（1和2）换成hello，最后的结果是hello，3，4，5。-->
+<!--（2）当输入“-1”时，输入框停止弹出-->
+
+<script>
+
+    var input = prompt("please input number(-1 to complete)");
+    var arr = new Array();
+    while (input != "-1"){
+        arr.push(input);
+        input = prompt("please input number(-1 to complete)");
+    }
+    arr.splice(0, 2, "hello");
+    document.write(arr);
+
+</script>
+
+
+</body>
+</html>
