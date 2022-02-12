@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--2-22 编程练习-->
+<!--补充代码，实现对用户输入数据进行降序排序，注意：用户输入的结束符“-1”不进行排序。-->
+
+<!--任务-->
+<!--第一步：页面循环弹出输入框，用户需要不断输入数据，直到用户输入-1，才停止弹出输入框，把用户输入的数据放进一个数组中，可以用push（）方法：-->
+<!--arr.push(input);-->
+<!--第二步：这个数组要排除-1这个结束数据：用到数组的pop（）方法，删除数组的最后一项：-->
+<!--arr.pop();-->
+<!--第三步：最后让数组进行降序排序，然后显示在页面中，降序的方法可以给sort传入一个匿名函数实现：-->
+<!--arr.sort(function(x,y){return y-x});-->
+
+<script>
+    var inputs = new Array();
+    var input = prompt("input your number:(-1 to complete)");
+    while (input != "-1"){
+        inputs.push(input);
+        input = prompt("input your number:(-1 to complete)");
+    }
+    document.write(inputs + "<br/>");
+
+    inputs.sort(function (x,y){return y-x});
+
+    document.write(inputs);
+
+
+</script>
+
+
+
+</body>
+</html>
