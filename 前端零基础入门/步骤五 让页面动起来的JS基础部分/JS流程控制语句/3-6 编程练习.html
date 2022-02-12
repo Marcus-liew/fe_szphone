@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-<!--TODO-->
+<!--打印所有0-100（包含100）之间除了22，44，66以及88之外的偶数，并求他们的和。-->
+
+<script>
+    var sum = 0;
+    for (let i = 0; i <= 100; i=i+2) {
+        if (i==22||i==44||i==66||i==88){
+            continue;
+        }
+        document.write(i+" ");
+        sum = sum + i;
+    }
+    document.write("<br/>");
+    document.write(sum);
+</script>
+
 </body>
 </html>
