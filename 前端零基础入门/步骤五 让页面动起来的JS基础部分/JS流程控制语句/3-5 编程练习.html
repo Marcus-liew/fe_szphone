@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-<!--TODO-->
+
+
+<!--完成一个验证密码的功能，验证两次输入的密码是否一致。要求如下：-->
+<!--（1）默认密码是：123456。-->
+<!--（2）当用户输入的密码是默认密码时，弹出下一个输入框”请再次输入密码“，如果不是默认密码，就一直循环“请输入密码”。-->
+<!--（3）如果用户输入的密码是默认密码，那么弹出“请再次输入密码”，如果第二次输入的密码和第一次的不一样，就一直循环再次输入密码。直到两次的密码相同，弹出“两次输入的密码一致”。-->
+
+<script>
+    var pwd = "123456";
+    var input_pwd = prompt("please input pwd:");
+    if (input_pwd == pwd){
+        var input_pwd_2 = prompt("please input again:");
+        while (input_pwd != input_pwd_2){
+            input_pwd_2 = prompt("please input again:");
+        }
+        alert("两次输入的密码一致");
+    }else {
+        var input_pwd = prompt("please input pwd:");
+        while (input_pwd != pwd){
+            input_pwd = prompt("please input pwd:");
+        }
+        var input_pwd_2 = prompt("please input again:");
+        while (input_pwd != input_pwd_2){
+            input_pwd_2 = prompt("please input again:");
+        }
+        alert("两次输入的密码一致");
+    }
+</script>
 </body>
 </html>
