@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--小伙伴们，让我们来封装一个函数，实现数组内容的反向输出功能，比如：-->
+<!--数组1，2，3，4，5，通过该函数之后，输出的是：5，4，3，2，1-->
+
+<script>
+    var numbers = [2,3,4,1,5];
+    document.write(numbers.sort() + "<br/>");
+    document.write(numbers.sort(function(x,y){return y-x}));
+</script>
+
+
+</body>
+</html>

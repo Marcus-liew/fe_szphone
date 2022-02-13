@@ -6,5 +6,23 @@
 </head>
 <body>
 <!--TODO-->
+<!--小伙伴们，数组的indexOf（）方法有兼容性问题，如果我们要考虑到低版本浏
+览器兼容性的话，我们就要自己写一个函数去封装这个方法，那么接下来我们就试试自
+己动手写下这个函数吧！-->
+
+<script>
+    var arr = "beijing welcome you!";
+    var i;
+    function newIndexOf(arr, value){
+        let len = arr.length;
+        for( i = 0; i < len; i++){
+            if(arr[i] == value){
+                return i;
+            }
+        }
+    }
+    var result = newIndexOf(arr, "beijing");
+    document.write(result);
+</script>
 </body>
 </html>
