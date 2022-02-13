@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--小伙伴们，今天学习了字符串的一些方法，我们来做个练习吧，对用户输入内容的输入框进行排查，看有没有敏感字“草”字。-->
+
+<script>
+    var input = prompt("pls input a string");
+
+    while (input != "-1"){
+        var search = input.indexOf("草");
+        if (search == -1){
+            alert("没有草字");
+        }else {
+            alert("草,在第"+search+"位置");
+        }
+        input = prompt("pls input a string");
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
