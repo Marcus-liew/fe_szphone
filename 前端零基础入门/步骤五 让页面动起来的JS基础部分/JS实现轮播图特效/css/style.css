@@ -86,11 +86,17 @@ body{
     width: 244px;
     height: 460px;
     background-color: rgba(7,17,27,0.2);
+    z-index: 1;
 }
 
 /*主菜单*/
 .menu-content{
-
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 244px;
+    height: 460px;
+    z-index: 2;
 }
 
 
