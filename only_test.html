@@ -5,18 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+
+<button id="btn">hello</button>
+
+
 <script>
-    var a = [1,2,3], b;
-    // b = new Array();
-    // for (let i = 0; i < a.length; i++) {
-    //     b[i] = a[i];
-    // }
-
-    // b = [].concat(a);
-
-    b = a.slice(0);
-
-    document.write(b);
+    var myalert = function (){
+        alert("hahaha");
+    }
+    var btn = document.getElementById("btn");
+    btn.onclick = myalert;
 
 </script>
 </body>

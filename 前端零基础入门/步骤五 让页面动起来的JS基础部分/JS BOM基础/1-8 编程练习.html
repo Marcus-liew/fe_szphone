@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--TODO-->
+<!--根据效果图，实现以下效果：-->
+<!--单击页面的“点击”按钮时，弹出输入框-->
+<!--当点击输入框上的“确定“时，按钮上的文字变成输入框输入的内容。-->
+
+<input type="button" value="点击">
+<script type="text/javascript">
+    //补充代码
+    var btns = document.getElementsByTagName("input");
+    var text = window.prompt("点击确定时，按钮文字将替换为文字内容");
+    if (text){
+        btns[0].value = text;
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
