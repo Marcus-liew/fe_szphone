@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "PingFang SC", serif;
+    color: #14191e;
+}
+
+.main{
+    height: 460px;
+    width: 1200px;
+    background-color: green;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+}
+/*焦点图*/
+.banner{
+    width: 1200px;
+    height: 460px;
+    overflow: hidden;
+}
+.banner-slide{
+    width: 1200px;
+    height: 460px;
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.slide1{
+    background-image: url("../img/bg1.jpg");
+}
+.slide2{
+    background-image: url("../img/bg2.jpg");
+}
+.slide3{
+    background-image: url("../img/bg3.jpg");
+}
+/*TODO 笔记：负边距居中*/
+.button{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    left: 244px;
+    right: 0;
+    top: 50%;          /*负边距居中（1）*/
+    margin-top: -40px; /*负边距居中（2）*/
+    /*TODO 笔记：背景图片居中*/
+    background: url("../img/arrow.png") center center no-repeat;  /*背景图片居中*/
+    transform: rotate(180deg);
+}
+.next{
+    left: auto;  /*TODO 笔记 因为button中有了left:0，所以必须在这里设置一下left: auto，否则right:0 不起作用*/
+    right: 0;
+    transform: rotate(0deg); /*TODO 笔记 因为不需要旋转图片，所以直接0度即可，千万不要写成rotate（180deg）想着基于button中的180度再转180度*/
+}
+
+.dots{
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    line-height: 12px;
+}
+.dots span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(7,17,27,0.4);
+    margin-left: 8px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset; /*TODO 笔记 设置阴影*/
+    cursor: pointer; /*TODO 笔记 设置小手形状*/
+}
+.dots span.active{ /*TODO 笔记 这里千万不能直接写.active*/
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+}
+
+.menu-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 244px;
+    height: 460px;
+    background-color: rgba(7,17,27,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
