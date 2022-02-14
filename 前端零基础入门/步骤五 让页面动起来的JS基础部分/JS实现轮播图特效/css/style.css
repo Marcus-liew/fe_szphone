@@ -78,6 +78,7 @@ body{
     box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
 }
 
+/*菜单区域*/
 .menu-box{
     position: absolute;
     left: 0;
@@ -87,6 +88,10 @@ body{
     background-color: rgba(7,17,27,0.2);
 }
 
+/*主菜单*/
+.menu-content{
+
+}
 
 
 
