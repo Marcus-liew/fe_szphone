@@ -16,6 +16,15 @@ a:link, a:visited{
     color:#5e5e5e;
 }
 
+@font-face {
+    font-family: "iconfont";
+    src: url("../img/font/iconfont.eot");
+    src: url("../img/font/iconfont.eot") format('embedded-opentype');
+    src: url("../img/font/iconfont.woff") format('woff');
+    src: url("../img/font/iconfont.ttf") format('truetype');
+    src: url("../img/font/iconfont.svg#iconfont") format('svg');
+}
+
 .main{
     height: 460px;
     width: 1200px;
@@ -112,11 +121,34 @@ a:link, a:visited{
     line-height: 66px;
     cursor: pointer;
     padding: 0 24px;
+    /*TODO 笔记：定义每个item下面的白线，但由于白线不是贯穿整个item，所以不能定义在这里，注释掉，在<a>中定义*/
+    /*TODO 笔记：border可以上下左右分别定义*/
+    /*border-bottom: 1px solid rgba(255,255,255,0.2);*/
 }
 .menu-item a{
     display: block;
     color: #e7e7e7;
     font-size: 16px;
+    /*TODO 笔记：因为menu-item设置了左右24px的填充，所以下面的border不会贯穿整个item*/
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    height: 63px;
+    padding: 8px;
+    /*TODO 笔记：为了让<i>标签能定位*/
+    position: relative;
+}
+/*TODO 笔记：最后一个item没有边框，利用css3的特性，last-child伪类，将其边框设为无*/
+.menu-item:last-child a{
+    border-bottom: none;
+}
+
+.menu-item i{
+    position: absolute;
+    right: 32px;
+    top: 2px;
+    color: rgba(255,255,255,0.5);
+    font-weight: normal;
+    font-style: normal;
+    font-family: "iconfont";
 }
 
 
