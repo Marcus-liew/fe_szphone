@@ -18,11 +18,11 @@ a:link, a:visited{
 
 @font-face {
     font-family: "iconfont";
-    src: url("../img/font/iconfont.eot");
-    src: url("../img/font/iconfont.eot") format('embedded-opentype');
-    src: url("../img/font/iconfont.woff") format('woff');
-    src: url("../img/font/iconfont.ttf") format('truetype');
-    src: url("../img/font/iconfont.svg#iconfont") format('svg');
+    src: url("../img/font/iconfont.eot"),
+    url("../img/font/iconfont.eot") format('embedded-opentype'),
+    url("../img/font/iconfont.woff") format('woff'),
+    url("../img/font/iconfont.ttf") format('truetype'),
+    url("../img/font/iconfont.svg#iconfont") format('svg');
 }
 
 .main{
@@ -144,12 +144,12 @@ a:link, a:visited{
 .menu-item i{
     position: absolute;
     right: 32px;
-    top: 2px;
+    top: 8px;
     color: rgba(255,255,255,0.5);
     font-weight: normal;
     font-style: normal;
     font-family: "iconfont";
-    /*background-color: #f01400;*/
+    font-size: 28px;
 }
 
 /*子菜单*/
