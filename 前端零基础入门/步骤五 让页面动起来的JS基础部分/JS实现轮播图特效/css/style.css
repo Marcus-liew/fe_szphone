@@ -39,13 +39,19 @@ a:link, a:visited{
     height: 460px;
     overflow: hidden;
 }
+/*图片框设置，先都不要显示，通过js将display置为block*/
 .banner-slide{
     width: 1200px;
     height: 460px;
     float: left;
     background-repeat: no-repeat;
+    display: none;
 }
-
+/*让第一张图片先显示出来*/
+.banner-slide-active{
+    display: block;
+}
+/*让每个图片的url*/
 .slide1{
     background-image: url("../img/bg1.jpg");
 }
