@@ -68,6 +68,13 @@ a:link, a:visited{
     background: url("../img/arrow.png") center center no-repeat;  /*背景图片居中*/
     transform: rotate(180deg);
 }
+
+.button:hover{
+    background-color: #2b333b;
+    opacity: 0.2;
+    filter: alpha(opacity=0.2); /*兼容IE浏览器*/
+}
+
 .next{
     left: auto;  /*TODO 笔记 因为button中有了left:0，所以必须在这里设置一下left: auto，否则right:0 不起作用*/
     right: 0;
