@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    background-color: #9a0606;
+    width: 500px;
+    height: 500px;
+    padding: 100px;
+    margin: 100px;
+    /*加了box-sizing: border-box 是往里挤压内容，不加是往外挤压*/
+    box-sizing: border-box;
+}
