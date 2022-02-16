@@ -1,222 +1,222 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: "PingFang SC", serif;
-    color: #14191e;
+body {
+  font-family: "PingFang SC", serif;
+  color: #14191e;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-a:link, a:visited{
-    color:#5e5e5e;
+a:link,
+a:visited {
+  color: #5e5e5e;
 }
 
 @font-face {
-    font-family: "iconfont";
-    src: url("../img/font/iconfont.eot"),
-    url("../img/font/iconfont.eot") format('embedded-opentype'),
-    url("../img/font/iconfont.woff") format('woff'),
-    url("../img/font/iconfont.ttf") format('truetype'),
-    url("../img/font/iconfont.svg#iconfont") format('svg');
+  font-family: "iconfont";
+  src: url("../img/font/iconfont.eot"),
+    url("../img/font/iconfont.eot") format("embedded-opentype"),
+    url("../img/font/iconfont.woff") format("woff"),
+    url("../img/font/iconfont.ttf") format("truetype"),
+    url("../img/font/iconfont.svg#iconfont") format("svg");
 }
 
-.main{
-    height: 460px;
-    width: 1200px;
-    background-color: green;
-    margin: 30px auto;
-    overflow: hidden;
-    position: relative;
+.main {
+  height: 460px;
+  width: 1200px;
+  background-color: green;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
 }
 /*焦点图*/
-.banner{
-    width: 1200px;
-    height: 460px;
-    overflow: hidden;
+.banner {
+  width: 1200px;
+  height: 460px;
+  overflow: hidden;
 }
 /*图片框设置，先都不要显示，通过js将display置为block*/
-.banner-slide{
-    width: 1200px;
-    height: 460px;
-    float: left;
-    background-repeat: no-repeat;
-    display: none;
+.banner-slide {
+  width: 1200px;
+  height: 460px;
+  float: left;
+  background-repeat: no-repeat;
+  display: none;
 }
 /*让第一张图片先显示出来*/
-.banner-slide-active{
-    display: block;
+.banner-slide-active {
+  display: block;
 }
 /*让每个图片的url*/
-.slide1{
-    background-image: url("../img/bg1.jpg");
+.slide1 {
+  background-image: url("../img/bg1.jpg");
 }
-.slide2{
-    background-image: url("../img/bg2.jpg");
+.slide2 {
+  background-image: url("../img/bg2.jpg");
 }
-.slide3{
-    background-image: url("../img/bg3.jpg");
+.slide3 {
+  background-image: url("../img/bg3.jpg");
 }
 /*TODO 笔记：负边距居中*/
-.button{
-    position: absolute;
-    width: 40px;
-    height: 80px;
-    left: 244px;
-    right: 0;
-    top: 50%;          /*负边距居中（1）*/
-    margin-top: -40px; /*负边距居中（2）*/
-    /*TODO 笔记：背景图片居中*/
-    background: url("../img/arrow.png") center center no-repeat;  /*背景图片居中*/
-    transform: rotate(180deg);
+.button {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  left: 244px;
+  right: 0;
+  top: 50%; /*负边距居中（1）*/
+  margin-top: -40px; /*负边距居中（2）*/
+  /*TODO 笔记：背景图片居中*/
+  background: url("../img/arrow.png") center center no-repeat; /*背景图片居中*/
+  transform: rotate(180deg);
 }
 
-.button:hover{
-    background-color: #2b333b;
-    opacity: 0.2;
-    filter: alpha(opacity=0.2); /*兼容IE浏览器*/
+.button:hover {
+  background-color: #2b333b;
+  opacity: 0.2;
+  filter: alpha(opacity=0.2); /*兼容IE浏览器*/
 }
 
-.next{
-    left: auto;  /*TODO 笔记 因为button中有了left:0，所以必须在这里设置一下left: auto，否则right:0 不起作用*/
-    right: 0;
-    transform: rotate(0deg); /*TODO 笔记 因为不需要旋转图片，所以直接0度即可，千万不要写成rotate（180deg）想着基于button中的180度再转180度*/
+.next {
+  left: auto; /*TODO 笔记 因为button中有了left:0，所以必须在这里设置一下left: auto，否则right:0 不起作用*/
+  right: 0;
+  transform: rotate(
+    0deg
+  ); /*TODO 笔记 因为不需要旋转图片，所以直接0度即可，千万不要写成rotate（180deg）想着基于button中的180度再转180度*/
 }
 
-.dots{
-    position: absolute;
-    right: 24px;
-    bottom: 24px;
-    line-height: 12px;
+.dots {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  line-height: 12px;
 }
-.dots span{
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(7,17,27,0.4);
-    margin-left: 8px;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset; /*TODO 笔记 设置阴影*/
-    cursor: pointer; /*TODO 笔记 设置小手形状*/
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(7, 17, 27, 0.4);
+  margin-left: 8px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset; /*TODO 笔记 设置阴影*/
+  cursor: pointer; /*TODO 笔记 设置小手形状*/
 }
-.dots span.active{ /*TODO 笔记 这里千万不能直接写.active*/
-    background-color: #ffffff;
-    box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+.dots span.active {
+  /*TODO 笔记 这里千万不能直接写.active*/
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
 }
 
 /*菜单区域*/
-.menu-box{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 244px;
-    height: 460px;
-    background-color: rgba(7,17,27,0.2);
-    z-index: 1;
+.menu-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 244px;
+  height: 460px;
+  background-color: rgba(7, 17, 27, 0.2);
+  z-index: 1;
 }
 
 /*主菜单*/
-.menu-content{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 244px;
-    height: 460px;
-    z-index: 2;
+.menu-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 244px;
+  height: 460px;
+  z-index: 2;
 }
 
-.menu-item{
-    height: 64px;
-    line-height: 66px;
-    cursor: pointer;
-    padding: 0 24px;
-    /*TODO 笔记：定义每个item下面的白线，但由于白线不是贯穿整个item，所以不能定义在这里，注释掉，在<a>中定义*/
-    /*TODO 笔记：border可以上下左右分别定义*/
-    /*border-bottom: 1px solid rgba(255,255,255,0.2);*/
+.menu-item {
+  height: 64px;
+  line-height: 66px;
+  cursor: pointer;
+  padding: 0 24px;
+  /*TODO 笔记：定义每个item下面的白线，但由于白线不是贯穿整个item，所以不能定义在这里，注释掉，在<a>中定义*/
+  /*TODO 笔记：border可以上下左右分别定义*/
+  /*border-bottom: 1px solid rgba(255,255,255,0.2);*/
 }
-.menu-item a{
-    display: block;
-    color: #e7e7e7;
-    font-size: 16px;
-    /*TODO 笔记：因为menu-item设置了左右24px的填充，所以下面的border不会贯穿整个item*/
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    height: 63px;
-    padding: 8px;
-    /*TODO 笔记：为了让<i>标签能定位*/
-    position: relative;
+.menu-item a {
+  display: block;
+  color: #e7e7e7;
+  font-size: 16px;
+  /*TODO 笔记：因为menu-item设置了左右24px的填充，所以下面的border不会贯穿整个item*/
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  height: 63px;
+  /* padding: 8px; */
+  /*TODO 笔记：为了让<i>标签能定位*/
+  position: relative;
 }
 /*TODO 笔记：最后一个item没有边框，利用css3的特性，last-child伪类，将其边框设为无*/
-.menu-item:last-child a{
-    border-bottom: none;
+.menu-item:last-child a {
+  border-bottom: none;
 }
 
-.menu-item i{
-    position: absolute;
-    right: 32px;
-    top: 8px;
-    color: rgba(255,255,255,0.5);
-    font-weight: normal;
-    font-style: normal;
-    font-family: "iconfont";
-    font-size: 28px;
+.menu-item i {
+  position: absolute;
+  right: 32px;
+  top: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  font-style: normal;
+  font-family: "iconfont";
+  font-size: 28px;
 }
 
 /*子菜单*/
-.sub-menu{
-    width: 730px;
-    height: 458px;
-    position: absolute;
-    left: 244px;
-    top: 0;
-    background-color: #ffffff;
-    z-index: 500;
-    border: 1px solid #d9dde1;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+.sub-menu {
+  width: 730px;
+  height: 458px;
+  position: absolute;
+  left: 244px;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 500;
+  border: 1px solid #d9dde1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
-.inner-box{
-    width: 100%;
-    height: 100%;
-    background: url("../img/fe.png") no-repeat;
+.inner-box {
+  width: 100%;
+  height: 100%;
+  background: url("../img/fe.png") no-repeat;
 }
 
-.sub-inner-box{
-    width: 652px;
-    margin-left: 40px;
-    overflow: hidden;
+.sub-inner-box {
+  width: 652px;
+  margin-left: 40px;
+  overflow: hidden;
 }
 
-.title{
-    font-size: 16px;
-    color: #9a0606;
-    line-height: 16px;
-    font-weight: bold;
-    margin: 28px 0 30px 0;
+.title {
+  font-size: 16px;
+  color: #9a0606;
+  line-height: 16px;
+  font-weight: bold;
+  margin: 28px 0 30px 0;
 }
 
-.sub-row{
-    margin-bottom: 25px;
+.sub-row {
+  margin-bottom: 25px;
 }
 
-.bold{
-    font-weight: 700;
-    margin-right: 10px;
+.bold {
+  font-weight: 700;
+  margin-right: 10px;
 }
-.mr10{
-    margin-left: 10px;
+.mr10 {
+  margin-left: 10px;
 }
-.ml10{
-    margin-right: 10px;
-}
-
-.hide{
-    display: none;
+.ml10 {
+  margin-right: 10px;
 }
 
-
-
-
+.hide {
+  display: none;
+}
