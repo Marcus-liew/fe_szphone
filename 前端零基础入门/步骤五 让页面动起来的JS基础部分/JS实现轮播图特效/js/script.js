@@ -1,6 +1,7 @@
 // 声明全局变量
 var index = 0;
-
+// 为了停止轮播，要拿到main
+var main = document.getElementById("main");
 
 // 上一张图片按钮
 var prev = document.getElementById("prev");
@@ -21,7 +22,7 @@ var timer = null;
 
 function stopAutoPlay(){
     if(timer){
-        clearInterval(startAutoPlay());
+        clearInterval(timer);
     }
 }
 
@@ -32,7 +33,7 @@ function startAutoPlay(){
         index++;
         if (index>=3)index = 0;
         changeImg();
-    }, 5000)
+    }, 1000)
 }
 
 
@@ -82,7 +83,11 @@ for (let i = 0; i < dots.length; i++) {
 // 自动开启轮播
 startAutoPlay()
 
+// 鼠标滑入 停止轮播
+main.addEventListener("mouseover", stopAutoPlay);
 
+// 鼠标滑出，继续轮播
+main.addEventListener("mouseout", startAutoPlay);
 
 
 
