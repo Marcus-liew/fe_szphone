@@ -19,11 +19,11 @@ var main = byId("main"), // 为了停止轮播，要拿到main
 
     subMenu.addEventListener("mouseover", function (){
         subMenu.className = "sub-menu";
-    })
+    });
 
     subMenu.addEventListener("mouseout", function (){
         subMenu.className = "sub-menu hide";
-    })
+    });
 
 
 banner.addEventListener("mouseout", function (){
@@ -32,7 +32,7 @@ banner.addEventListener("mouseout", function (){
 
 menuContent.addEventListener("mouseout", function (){
     subMenu.className = "sub-menu hide";
-})
+});
 
 // 停止轮播
 function stopAutoPlay(){
