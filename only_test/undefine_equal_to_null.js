@@ -8,10 +8,12 @@
 
 // 这俩为啥相等？？？
 // https://class.imooc.com/lesson/788#mid=19778
-console.log(typeof 4);
+
 console.log(typeof [4]);
 
-var a = [4];
-
-
-
+var a = [1,2,3,4];
+console.log(a);
+console.log(a.length);
+for (const aKey in a) {
+    console.log(a[aKey]);
+}
