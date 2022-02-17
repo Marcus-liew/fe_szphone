@@ -27,4 +27,5 @@ console.log("undefined的类型是" + typeof undefined);
 console.log("true的类型是" + typeof true);
 
 console.log([1,2,3,4] instanceof Array);
-console.log({} instanceof object);
+console.log({} instanceof Object);
+console.log(null instanceof Object);
