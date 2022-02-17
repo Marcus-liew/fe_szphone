@@ -17,3 +17,14 @@ console.log(a.length);
 for (const aKey in a) {
     console.log(a[aKey]);
 }
+
+console.log("4的类型是" + typeof 4);
+console.log("liuxin的类型是" + typeof "liuxin");
+console.log("[1,2,3,4]的类型是" + typeof [1,2,3,4]);
+console.log("{name: liuxin}的类型是" + typeof {});
+console.log("null的类型是" + typeof null);
+console.log("undefined的类型是" + typeof undefined);
+console.log("true的类型是" + typeof true);
+
+console.log([1,2,3,4] instanceof Array);
+console.log({} instanceof object);
